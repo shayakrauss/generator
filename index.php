@@ -23,7 +23,7 @@
   </form>
 
   <div id="resDiv">
-    <a href="#0" id="resSelect">Select Result</a>
+    <a href="#0" id="resSelect">Select Resfult</a>
     <span id="genResult">&nbps;</span>
   </div>
 
