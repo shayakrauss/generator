@@ -219,5 +219,5 @@ pip-log.txt
 ## Custom
 #############
 
-js/min/
-css/
+js/min/global.min.js.map
+js/min/global.min.js

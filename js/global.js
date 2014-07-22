@@ -6,12 +6,14 @@ $('#resSelect').on('click', function(e) {
 
 $('#genSelect').on('change', function() {
   var genInput = $('#genInput');
+  genInput.show().focus();
   if($(this).val() == 'url_shorten') {
     genInput.attr('type', 'url');
-  } else {
+  } else if($(this).val() !== '') {
     genInput.attr('type', 'text');
+  } else {
+    genInput.hide();
   }
-  genInput.show().focus();
 })
 
 $('#genSelect, #genInput').on('change', function() {
