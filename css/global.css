@@ -1,0 +1,11 @@
+.error {
+  color: red;
+}
+
+#mainErrorMsg {
+  display: none;
+}
+
+#resDiv {
+  display: none;
+}
