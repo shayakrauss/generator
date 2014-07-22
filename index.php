@@ -24,7 +24,7 @@
 
   <div id="resDiv">
     <a href="#0" id="resSelect">Select Result</a>
-    <div id="genResult">&nbps;</div>
+    <span id="genResult">&nbps;</span>
   </div>
 
 

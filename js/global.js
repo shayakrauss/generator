@@ -5,11 +5,13 @@ $('#resSelect').on('click', function(e) {
 })
 
 $('#genSelect').on('change', function() {
+  var genInput = $('#genInput');
   if($(this).val() == 'url_shorten') {
-    $('#genInput').attr('type', 'url');
+    genInput.attr('type', 'url');
   } else {
-    $('#genInput').attr('type', 'text');
+    genInput.attr('type', 'text');
   }
+  genInput.show().focus();
 })
 
 $('#genSelect, #genInput').on('change', function() {
@@ -41,3 +43,21 @@ $('#genForm').on('submit', function(e) {
     $('#mainErrorMsg').text('All fields are required.').show();
   }
 });
+
+$("#resSelect").on('click', function() {
+  if($('#tmp').length) {
+    $('#tmp').remove();
+  }
+  var clickText = $('#genResult').text();
+  $('<textarea id="tmp" />')
+        .appendTo($('#genResult'))
+        .val(clickText)
+        .focus()
+        .select();
+
+  return false;
+});
+
+$(':not(#resSelect)').on('click', function() {
+  $('#tmp').remove();
+})
